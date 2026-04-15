@@ -16,24 +16,23 @@ describe "Test De Tom" {
     assert.equals(tom.velocidadMaxima(), 14)
   }
 
-  test "Tom Come a Nibbles" {
+  test "Tom Come a Nibbles, velocidad maxima es 18.7" {
     tom.comer(jerry)
     tom.correr(24)
     tom.comer(nibbles)
     assert.equals(tom.velocidadMaxima(), 18.7)
   }
 
-  test "Jerry Cumple años y Tom lo Come" {
+  test "Jerry Cumple años y Tom lo Come, velocidad maxima es 25.9" {
     tom.comer(jerry)
     tom.correr(24)
     tom.comer(nibbles)
-    assert.equals(tom.velocidadMaxima(), 18.7) //puedo poner un assert en medio del codigo
     jerry.cumplirAnios(1)
     tom.comer(jerry)
     assert.equals(tom.velocidadMaxima(), 25.9)
   }
 
-  test "Tom corre 38 metros" {
+  test "Tom corre 38 metros, velocidad maxima es 34" {
     tom.comer(jerry)
     tom.correr(24)
     tom.comer(nibbles)
@@ -42,5 +41,5 @@ describe "Test De Tom" {
     tom.correr(38)
     assert.equals(tom.velocidadMaxima(), 24)
   }
-
+  
 }

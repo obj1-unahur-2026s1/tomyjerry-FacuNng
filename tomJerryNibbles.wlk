@@ -20,6 +20,18 @@ object tom {
         return energia
     }
 
+    method puedeCazarRatonADistancia(unaDistancia) {
+      return energia > unaDistancia/2
+    }
+
+    method cazarADistancia(distancia, raton) {
+      if (self.puedeCazarRatonADistancia(distancia)){
+        self.correr(distancia)
+        self.comer(raton)
+      }
+
+    }
+
 }
 
 object jerry {
@@ -40,6 +52,3 @@ object nibbles {
   } 
 }
 
-// Inventar otro ratón
-//token
-//ghp_Uib5RpnHslW5Yf5xYWNLQtihqY90vB4X4

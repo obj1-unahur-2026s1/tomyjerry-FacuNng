@@ -1,17 +1,46 @@
 import tomJerryNibbles.*
 
-describe "Grupo de test" {
+describe "Test De Tom" {
 
-  test "test 1" {
-    assert.equals(100, 50+50)
+  test "La velocidad maxima es 10" {
+    assert.equals(tom.velocidadMaxima(), 10)
   }
 
-  test "test 3" {
-    assert.that(true)
+  test "Tom Come a Jerry" {
+    tom.comer(jerry)
+    assert.equals(tom.velocidadMaxima(), 15.2)
   }
 
-  test "test 4" {
-    assert.notThat(false)
+  test "Tom Corre 24 metros" {
+    tom.correr(24)
+    assert.equals(tom.velocidadMaxima(), 14)
+  }
+
+  test "Tom Come a Nibbles" {
+    tom.comer(jerry)
+    tom.correr(24)
+    tom.comer(nibbles)
+    assert.equals(tom.velocidadMaxima(), 18.7)
+  }
+
+  test "Jerry Cumple años y Tom lo Come" {
+    tom.comer(jerry)
+    tom.correr(24)
+    tom.comer(nibbles)
+    assert.equals(tom.velocidadMaxima(), 18.7) //puedo poner un assert en medio del codigo
+    jerry.cumplirAnios(1)
+    tom.comer(jerry)
+    assert.equals(tom.velocidadMaxima(), 25.9)
+  }
+
+  test "Tom corre 38 metros" {
+    tom.comer(jerry)
+    tom.correr(24)
+    tom.comer(nibbles)
+    jerry.cumplirAnios(1)
+    tom.comer(jerry)
+    tom.correr(38)
+    assert.equals(tom.velocidadMaxima(), 24)
   }
 
 }
